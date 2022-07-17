@@ -26,3 +26,13 @@ steps:
     targetType: 'inline'
     script: echo tonyc chen
     
+- task: oc-setup@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'tonetrue007@yahoo.com_openshift'
+
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'tonetrue007@yahoo.com_openshift'
+    cmd: 'oc new-project my-project1'
